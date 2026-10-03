@@ -31,6 +31,9 @@ function showPage(pageIndex) {
         currentPage === pages.length - 1;
 }
 
+
+/* Page navigation */
+
 function nextPage() {
     if (currentPage < pages.length - 1) {
         showPage(currentPage + 1);
@@ -44,7 +47,7 @@ function previousPage() {
 }
 
 
-/* Arrow keys can also change pages */
+/* Arrow keys */
 
 document.addEventListener("keydown", (event) => {
 
@@ -146,38 +149,62 @@ for (let i = 0; i < 22; i++) {
 }
 
 
-/* Open the problem solver */
+/* FAQ AI */
 
-function openSolver() {
-    showPage(9);
+const CHAT_API_URL =
+    "https://37b68c46-8000.inc1.devtunnels.ms/chat";
+
+const faqButtons =
+    document.querySelectorAll(".faq-ai-item");
+
+const faqChatForm =
+    document.getElementById("faq-chat-form");
+
+const faqChatInput =
+    document.getElementById("faq-chat-input");
+
+const faqChatArea =
+    document.getElementById("faq-chat-area");
+
+
+function addFaqMessage(message, className) {
+
+    const messageBox =
+        document.createElement("div");
+
+    messageBox.className =
+        `faq-chat-message ${className}`;
+
+    const paragraph =
+        document.createElement("p");
+
+    paragraph.textContent = message;
+
+    messageBox.appendChild(paragraph);
+
+    faqChatArea.appendChild(messageBox);
+
+    faqChatArea.scrollTop =
+        faqChatArea.scrollHeight;
+
+    return messageBox;
 }
 
 
-/* Send a question to the backend */
+async function askSensei(message) {
 
-async function sendQuestion() {
+    addFaqMessage(message, "user-message");
 
-    const input =
-        document.getElementById("solver-input");
-
-    const responseBox =
-        document.getElementById("solver-response");
-
-    const message = input.value.trim();
-
-    if (!message) {
-        responseBox.textContent =
-            "Please enter a question first.";
-        return;
-    }
-
-    responseBox.textContent =
-        "Sensei is thinking...";
+    const thinkingMessage =
+        addFaqMessage(
+            "Sensei is thinking...",
+            "sensei-message"
+        );
 
     try {
 
         const response = await fetch(
-            "http://127.0.0.1:8000/chat",
+            CHAT_API_URL,
             {
                 method: "POST",
 
@@ -195,16 +222,66 @@ async function sendQuestion() {
             throw new Error("Server request failed.");
         }
 
-        const data = await response.json();
+        const data =
+            await response.json();
 
-        responseBox.textContent = data.reply;
+        thinkingMessage
+            .querySelector("p")
+            .textContent =
+            data.reply;
 
     } catch (error) {
 
-        responseBox.textContent =
+        thinkingMessage
+            .querySelector("p")
+            .textContent =
             "Could not connect to Syllabus Sensei. Make sure the backend is running.";
 
     }
+}
+
+
+/* Clickable FAQ questions */
+
+faqButtons.forEach((button) => {
+
+    button.addEventListener("click", () => {
+
+        const question =
+            button.dataset.question;
+
+        if (question) {
+            askSensei(question);
+        }
+
+    });
+
+});
+
+
+/* Chat input */
+
+if (faqChatForm) {
+
+    faqChatForm.addEventListener(
+        "submit",
+        (event) => {
+
+            event.preventDefault();
+
+            const message =
+                faqChatInput.value.trim();
+
+            if (!message) {
+                return;
+            }
+
+            faqChatInput.value = "";
+
+            askSensei(message);
+        }
+    );
+
 }
 
 

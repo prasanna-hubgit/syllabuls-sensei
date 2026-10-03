@@ -1,12 +1,10 @@
+
 from app.rag import RAGSystem
 
 
 class SyllabusSensei:
     """
-    Deerwalk-specific academic assistant.
-
-    For now, Sensei uses the local knowledge base.
-    Later, we can connect an AI model when API credits are available.
+    Deerwalk FAQ chatbot for Syllabus Sensei.
     """
 
     def __init__(self):
@@ -17,81 +15,57 @@ class SyllabusSensei:
         message = message.strip()
 
         if not message:
-            return "Please ask me a question."
+            return "Please ask me a question about Deerwalk."
 
-        results = self.rag.search(message)
+        results = self.rag.search(message, top_k=5)
 
         if not results:
             return (
-                "I couldn't find that information in my Deerwalk "
-                "knowledge base yet."
+                "I'm currently designed to answer questions about "
+                "Deerwalk Sifal School, its streams, subjects, and courses."
             )
 
-        best_result = results[0]
+        for result in results:
+            data = result["data"]
 
-        return self.format_answer(best_result)
+            if "faqs" in data:
+                faq = self.find_best_faq(message, data["faqs"])
 
-    def format_answer(self, result):
-        """Turn retrieved knowledge into a readable response."""
-
-        data = result["data"]
-
-        # FAQ knowledge
-        if "faqs" in data:
-            return self.answer_from_faq(data["faqs"])
-
-        # Stream knowledge
-        if "streams" in data:
-            return self.answer_from_streams(data)
-
-        # Subject knowledge
-        if "subjects" in data:
-            return self.answer_from_subjects(data["subjects"])
-
-        # School information
-        if "school" in data:
-            return self.answer_from_school(data["school"])
-
-        return "I found relevant information, but I couldn't format it yet."
-
-    def answer_from_faq(self, faqs):
-        """Return the most relevant FAQ answer."""
-
-        return faqs[0]["answer"]
-
-    def answer_from_streams(self, data):
-        """Format stream information."""
-
-        streams = data.get("streams", [])
-
-        lines = ["The available +2 Science groups are:"]
-
-        for stream in streams:
-            subjects = ", ".join(stream["subjects"])
-            lines.append(
-                f"- {stream['name']}: {subjects}"
-            )
-
-        return "\n".join(lines)
-
-    def answer_from_subjects(self, subjects):
-        """Format subject information."""
-
-        lines = ["Here is the relevant subject information:"]
-
-        for subject in subjects[:5]:
-            lines.append(
-                f"- {subject['name']}: {subject['description']}"
-            )
-
-        return "\n".join(lines)
-
-    def answer_from_school(self, school):
-        """Format general school information."""
+                if faq:
+                    return faq["answer"]
 
         return (
-            f"{school['name']} ({school['short_name']}) "
-            f"offers {school['level']} education in "
-            f"{school['location']}."
+            "I couldn't find a relevant answer in my Deerwalk FAQ yet."
         )
-        
+
+    def find_best_faq(self, message: str, faqs):
+        """
+        Find the FAQ that best matches the student's question.
+        """
+
+        message_words = {
+            word.lower().strip(".,?!:;()[]{}")
+            for word in message.split()
+            if len(word) > 2
+        }
+
+        best_faq = None
+        best_score = 0
+
+        for faq in faqs:
+            question_words = {
+                word.lower().strip(".,?!:;()[]{}")
+                for word in faq["question"].split()
+                if len(word) > 2
+            }
+
+            score = len(
+                message_words.intersection(question_words)
+            )
+
+            if score > best_score:
+                best_score = score
+                best_faq = faq
+
+        return best_faq
+

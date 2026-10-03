@@ -22,7 +22,8 @@ body {
 }
 
 button,
-textarea {
+textarea,
+input {
     font: inherit;
 }
 
@@ -304,38 +305,134 @@ details p {
     font-size: 14px;
 }
 
-.solver-page {
-    max-width: 850px;
+.faq-ai-layout {
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 18px;
 }
 
-#solver-input {
+.faq-ai-list {
+    display: grid;
+    gap: 10px;
+}
+
+.faq-ai-item {
     width: 100%;
-    min-height: 180px;
-    margin-top: 35px;
-    padding: 18px;
-    resize: vertical;
+    padding: 18px 20px;
+    display: grid;
+    grid-template-columns: 35px 1fr;
+    gap: 12px;
+    align-items: center;
     border: 1px solid var(--border);
-    border-radius: 10px;
-    outline: none;
-    background: rgba(13, 17, 29, 0.9);
+    border-radius: 9px;
+    background: var(--panel);
     color: var(--text);
+    text-align: left;
+    transition: 0.2s ease;
+}
+
+.faq-ai-item span {
+    color: var(--accent);
+    font-size: 11px;
+}
+
+.faq-ai-item:hover {
+    border-color: rgba(143, 167, 255, 0.45);
+    background: rgba(143, 167, 255, 0.08);
+}
+
+.faq-ai-chat {
+    min-width: 0;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: var(--panel);
+    overflow: hidden;
+}
+
+.faq-ai-header {
+    padding: 24px;
+    border-bottom: 1px solid var(--border);
+}
+
+.faq-ai-header .card-number {
+    margin-bottom: 12px;
+}
+
+.faq-ai-header h3 {
+    margin-bottom: 8px;
+    font-size: 19px;
+}
+
+.faq-ai-header p {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.faq-chat-area {
+    min-height: 250px;
+    max-height: 300px;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.faq-chat-message {
+    max-width: 85%;
+    padding: 14px 16px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: rgba(7, 10, 18, 0.55);
+}
+
+.faq-chat-message p {
+    color: var(--muted);
+    font-size: 14px;
     line-height: 1.6;
 }
 
-#solver-input:focus {
+.faq-chat-input {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    padding: 15px;
+    border-top: 1px solid var(--border);
+}
+
+.faq-chat-input input {
+    width: 100%;
+    min-width: 0;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    outline: none;
+    background: rgba(7, 10, 18, 0.8);
+    color: var(--text);
+}
+
+.faq-chat-input input:focus {
     border-color: rgba(143, 167, 255, 0.45);
 }
 
-#solver-response {
-    min-height: 100px;
-    margin-top: 20px;
-    padding: 20px;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    background: var(--panel);
-    color: var(--muted);
-    white-space: pre-wrap;
-    line-height: 1.6;
+.faq-chat-input button {
+    padding: 12px 18px;
+    border: 1px solid rgba(143, 167, 255, 0.3);
+    border-radius: 7px;
+    background: rgba(143, 167, 255, 0.1);
+    color: var(--text);
+}
+
+.faq-chat-input button:hover {
+    background: rgba(143, 167, 255, 0.18);
+}
+
+.user-message {
+    margin-left: auto;
+    margin-bottom: 12px;
+}
+
+.sensei-message {
+    margin-bottom: 12px;
 }
 
 .page-controls {
@@ -409,6 +506,14 @@ details p {
 
     .info-panel {
         grid-template-columns: 1fr;
+    }
+
+    .faq-ai-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-chat-area {
+        max-height: 250px;
     }
 
     .page-controls {
