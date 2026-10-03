@@ -1,0 +1,26 @@
+{
+  "school": {
+    "name": "Deerwalk Sifal School",
+    "short_name": "DSS",
+    "level": "+2 Science",
+    "location": "Kathmandu, Nepal",
+    "description": "Deerwalk Sifal School provides +2 Science education with different academic groups and additional credit courses.",
+    "academic_groups": [
+      "Physical Group",
+      "Biology Group"
+    ],
+    "focus": [
+      "Science education",
+      "Computer Science",
+      "Programming",
+      "Communication",
+      "Project-based learning"
+    ],
+    "credit_courses": [
+      "Nepali Reading",
+      "English Reading",
+      "Public Speaking",
+      "Python Programming"
+    ]
+  }
+}

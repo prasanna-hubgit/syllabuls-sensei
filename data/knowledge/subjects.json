@@ -1,0 +1,46 @@
+{
+  "subjects": [
+    {
+      "name": "Physics",
+      "category": "Science",
+      "streams": ["Physical Group", "Biology Group"],
+      "description": "A core science subject covering physical laws, principles, mathematical relationships, experiments, and applications."
+    },
+    {
+      "name": "Chemistry",
+      "category": "Science",
+      "streams": ["Physical Group", "Biology Group"],
+      "description": "A core science subject covering matter, chemical reactions, stoichiometry, periodic trends, organic chemistry, and related applications."
+    },
+    {
+      "name": "Computer Science and Information Technology",
+      "category": "Science",
+      "streams": ["Physical Group"],
+      "description": "A science-stream subject focused on computing, programming, information technology, and computer-related concepts."
+    },
+    {
+      "name": "Biology",
+      "category": "Science",
+      "streams": ["Biology Group"],
+      "description": "A science subject focused on living organisms, biological systems, life processes, and related scientific concepts."
+    },
+    {
+      "name": "Mathematics",
+      "category": "Compulsory",
+      "streams": ["Physical Group", "Biology Group"],
+      "description": "A compulsory subject involving mathematical concepts, problem solving, logical reasoning, and quantitative skills."
+    },
+    {
+      "name": "English",
+      "category": "Compulsory",
+      "streams": ["Physical Group", "Biology Group"],
+      "description": "A compulsory subject focused on English language skills, reading, writing, communication, and comprehension."
+    },
+    {
+      "name": "Nepali",
+      "category": "Compulsory",
+      "streams": ["Physical Group", "Biology Group"],
+      "description": "A compulsory subject focused on Nepali language, literature, reading, writing, and communication."
+    }
+  ]
+}

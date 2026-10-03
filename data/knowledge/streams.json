@@ -1,0 +1,33 @@
+{
+  "school": "Deerwalk Sifal School",
+  "level": "+2 Science",
+  "streams": [
+    {
+      "name": "Physical Group",
+      "subjects": [
+        "Physics",
+        "Chemistry",
+        "Computer Science and Information Technology"
+      ]
+    },
+    {
+      "name": "Biology Group",
+      "subjects": [
+        "Physics",
+        "Chemistry",
+        "Biology"
+      ]
+    }
+  ],
+  "compulsory_subjects": [
+    "Nepali",
+    "English",
+    "Mathematics"
+  ],
+  "credit_courses": [
+    "Nepali Reading",
+    "English Reading",
+    "Public Speaking",
+    "Python Programming"
+  ]
+}

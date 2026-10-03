@@ -1,0 +1,32 @@
+{
+  "faqs": [
+    {
+      "question": "What streams are available at Deerwalk Sifal School?",
+      "answer": "The +2 Science program has Physical Group and Biology Group."
+    },
+    {
+      "question": "What subjects are in the Physical Group?",
+      "answer": "The Physical Group includes Physics, Chemistry, and Computer Science and Information Technology, along with the compulsory subjects Nepali, English, and Mathematics."
+    },
+    {
+      "question": "What subjects are in the Biology Group?",
+      "answer": "The Biology Group includes Physics, Chemistry, and Biology, along with the compulsory subjects Nepali, English, and Mathematics."
+    },
+    {
+      "question": "Is Computer Science available at Deerwalk?",
+      "answer": "Yes. Computer Science and Information Technology is available in the Physical Group."
+    },
+    {
+      "question": "Is Biology available at Deerwalk?",
+      "answer": "Yes. Biology is available in the Biology Group."
+    },
+    {
+      "question": "What compulsory subjects are taught?",
+      "answer": "The compulsory subjects are Nepali, English, and Mathematics."
+    },
+    {
+      "question": "What credit courses are available?",
+      "answer": "Examples of DSS credit courses include Nepali Reading, English Reading, Public Speaking, and Python Programming."
+    }
+  ]
+}

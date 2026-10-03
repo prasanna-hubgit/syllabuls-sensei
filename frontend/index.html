@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Syllabus Sensei</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="academic-background"></div>
+
+    <header class="topbar">
+        <div class="logo">
+            <span>Syllabus</span> Sensei
+        </div>
+
+        <div class="school-name">
+            Deerwalk Sifal School
+        </div>
+    </header>
+
+
+    <main id="page-container">
+
+        <!-- Home -->
+        <section class="page active">
+            <div class="hero">
+                <p class="eyebrow">DEERWALK ACADEMIC ASSISTANT</p>
+
+                <h1>
+                    See the subjects and strems with <span>Deerwalk</span> and  
+                    <span>Syllabus Sensei.</span>
+                </h1>
+
+                <p class="hero-text">
+                    Explore Deerwalk's academic streams, subjects,
+                    school information in one page.
+                </p>
+
+                <button class="primary-button" onclick="nextPage()">
+                    Explore
+                </button>
+            </div>
+        </section>
+
+
+        <!-- Streams -->
+        <section class="page">
+            <div class="page-content">
+
+                <p class="eyebrow">ACADEMIC STREAMS</p>
+
+                <h2>Choose your stream</h2>
+
+                <p class="section-text">
+                    Explore the Science groups available at Deerwalk.
+                </p>
+
+                <div class="card-grid">
+
+                    <div class="info-card">
+                        <span class="card-number">01</span>
+
+                        <h3>Physical Group</h3>
+
+                        <p>
+                            Physics, Chemistry and Computer Science
+                            Mathematics, English and Nepali.
+                        </p>
+
+                        <button onclick="showPage(2)">
+                            View subjects
+                        </button>
+                    </div>
+
+
+                    <div class="info-card">
+                        <span class="card-number">02</span>
+
+                        <h3>Biology Group</h3>
+
+                        <p>
+                            Physics, Chemistry and Biology with
+                            Mathematics, English and Nepali.
+                        </p>
+
+                        <button onclick="showPage(3)">
+                            View subjects
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Physical Group -->
+        <section class="page">
+            <div class="page-content">
+
+                <p class="eyebrow">PHYSICAL GROUP</p>
+
+                <h2>Subjects</h2>
+
+                <div class="subject-list">
+
+                    <div class="subject">
+                        <span>01</span>
+                        <div>
+                            <h3>Physics</h3>
+                            <p>
+                                Physical laws, principles,
+                                experiments and applications.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="subject">
+                        <span>02</span>
+                        <div>
+                            <h3>Chemistry</h3>
+                            <p>
+                                Matter, reactions, stoichiometry,
+                                periodic trends and organic chemistry.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="subject">
+                        <span>03</span>
+                        <div>
+                            <h3>Computer Science and Information Technology</h3>
+                            <p>
+                                Programming, computing, networking , ethical hacking and
+                                information technology.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="subject">
+                        <span>04</span>
+                        <div>
+                            <h3>Mathematics</h3>
+                            <p>
+                                Mathematical concepts,
+                                problem solving and reasoning.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="subject">
+                        <span>05</span>
+                        <div>
+                            <h3>English</h3>
+                            <p>
+                                Reading, writing, communication
+                                and comprehension.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="subject">
+                        <span>06</span>
+                        <div>
+                            <h3>Nepali</h3>
+                            <p>
+                                Nepali language, literature,
+                                reading and writing.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Biology Group -->
+        <section class="page">
+            <div class="page-content">
+
+                <p class="eyebrow">BIOLOGY GROUP</p>
+
+                <h2>Subjects</h2>
+
+                <div class="subject-list">
+
+                    <div class="subject">
+                        <span>01</span>
+                        <div>
+                            <h3>Physics</h3>
+                            <p>
+                                Physical laws, principles,
+                                experiments and applications.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="subject">
+                        <span>02</span>
+                        <div>
+                            <h3>Chemistry</h3>
+                            <p>
+                                Matter, reactions, stoichiometry,
+                                periodic trends and organic chemistry.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="subject">
+                        <span>03</span>
+                        <div>
+                            <h3>Biology</h3>
+                            <p>
+                                Living organisms, biological systems
+                                Zoology and Botany. 
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="subject">
+                        <span>04</span>
+                        <div>
+                            <h3>Mathematics</h3>
+                            <p>
+                                Mathematical concepts,
+                                problem solving and reasoning.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="subject">
+                        <span>05</span>
+                        <div>
+                            <h3>English</h3>
+                            <p>
+                                Reading, writing, communication
+                                and comprehension.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="subject">
+                        <span>06</span>
+                        <div>
+                            <h3>Nepali</h3>
+                            <p>
+                                Nepali language, literature,
+                                reading and writing.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- All Subjects -->
+        <section class="page">
+            <div class="page-content">
+
+                <p class="eyebrow">SUBJECTS</p>
+
+                <h2>Academic subjects</h2>
+
+                <div class="card-grid">
+
+                    <div class="small-card">
+                        <h3>Physics</h3>
+                        <p>Science</p>
+                    </div>
+
+                    <div class="small-card">
+                        <h3>Chemistry</h3>
+                        <p>Science</p>
+                    </div>
+
+                    <div class="small-card">
+                        <h3>Biology</h3>
+                        <p>Biology Group</p>
+                    </div>
+
+                    <div class="small-card">
+                        <h3>Computer Science</h3>
+                        <p>Physical Group</p>
+                    </div>
+
+                    <div class="small-card">
+                        <h3>Mathematics</h3>
+                        <p>Compulsory</p>
+                    </div>
+
+                    <div class="small-card">
+                        <h3>English</h3>
+                        <p>Compulsory</p>
+                    </div>
+
+                    <div class="small-card">
+                        <h3>Nepali</h3>
+                        <p>Compulsory</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+<!-- Courses by Deerwalk -->
+<section class="page">
+    <div class="page-content">
+
+        <p class="eyebrow">COURSES BY DEERWALK</p>
+
+        <h2>Courses by Deerwalk</h2>
+
+        <div class="card-grid">
+
+            <div class="info-card">
+                <span class="card-number">01</span>
+
+                <h3>Programming Languages</h3>
+
+                <p>
+                    Python, C++ and Java are included
+                    as programming languages.
+                </p>
+            </div>
+
+
+            <div class="info-card">
+                <span class="card-number">02</span>
+
+                <h3>English Reading</h3>
+
+                <p>
+                    Students read a new book every month
+                    as part of English Reading.
+                </p>
+            </div>
+
+
+            <div class="info-card">
+                <span class="card-number">03</span>
+
+                <h3>Nepali Reading</h3>
+
+                <p>
+                    Students read a new book every month
+                    as part of Nepali Reading.
+                </p>
+            </div>
+
+
+            <div class="info-card">
+                <span class="card-number">04</span>
+
+                <h3>DSS Talk</h3>
+
+                <p>
+                    A platform where students can express
+                    their opinions, ideas and perspectives.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+        <!-- School Information -->
+        <section class="page">
+            <div class="page-content">
+
+                <p class="eyebrow">ABOUT DSS</p>
+
+                <h2>School information</h2>
+
+                <div class="info-panel">
+
+                    <div>
+                        <span>School</span>
+                        <strong>Deerwalk Sifal School</strong>
+                    </div>
+
+                    <div>
+                        <span>Level</span>
+                        <strong>+2 Science</strong>
+                    </div>
+
+                    <div>
+                        <span>Location</span>
+                        <strong>Kathmandu, Nepal</strong>
+                    </div>
+
+                    <div>
+                        <span>Academic Groups</span>
+                        <strong>Physical Group · Biology Group</strong>
+                    </div>
+
+                </div>
+
+                <p class="section-text">
+                    Deerwalk Sifal School provides +2 Science education
+                    with different academic groups and additional
+                    credit courses.
+                </p>
+
+            </div>
+        </section>
+
+<!-- Contact Information -->
+<section class="page">
+    <div class="page-content">
+
+        <p class="eyebrow">CONTACT INFORMATION</p>
+
+        <h2>Contact Information</h2>
+
+        <div class="info-panel">
+
+            <div>
+                <span>Email</span>
+                <strong>contact@sifal.deerwalk.edu.np</strong>
+            </div>
+
+            <div>
+                <span>Phone</span>
+                <strong>+977-1-4591240</strong><br>
+                <strong>+977-9851064445</strong>
+            </div>
+
+            <div>
+                <span>Location</span>
+                <strong>Sifal, Kathmandu, Nepal</strong>
+            </div>
+
+            <div>
+                <span>LinkedIn</span>
+                <strong>Deerwalk Sifal School</strong>
+            </div>
+
+        </div>
+
+        <div class="card-grid">
+
+            <div class="info-card">
+                <span class="card-number">01</span>
+
+                <h3>Instagram</h3>
+
+                <p>
+                    Follow Deerwalk Sifal School on Instagram.
+                </p>
+
+                <a
+                    href="PASTE-INSTAGRAM-LINK-HERE"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Open Instagram
+                </a>
+            </div>
+
+            <div class="info-card">
+                <span class="card-number">02</span>
+
+                <h3>Facebook</h3>
+
+                <p>
+                    Follow Deerwalk Sifal School on Facebook.
+                </p>
+
+                <a
+                    href="PASTE-FACEBOOK-LINK-HERE"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Open Facebook
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+        <!-- FAQ -->
+        <section class="page">
+            <div class="page-content">
+
+                <p class="eyebrow">COMMON QUESTIONS</p>
+
+                <h2>FAQ</h2>
+
+                <div class="faq-list">
+
+                    <details>
+                        <summary>
+                            What streams are available?
+                        </summary>
+
+                        <p>
+                            The +2 Science program has Physical Group
+                            and Biology Group.
+                        </p>
+                    </details>
+
+
+                    <details>
+                        <summary>
+                            What subjects are in Physical Group?
+                        </summary>
+
+                        <p>
+                            Physics, Chemistry and Computer Science
+                            and Information Technology, along with
+                            Nepali, English and Mathematics.
+                        </p>
+                    </details>
+
+
+                    <details>
+                        <summary>
+                            What subjects are in Biology Group?
+                        </summary>
+
+                        <p>
+                            Physics, Chemistry and Biology, along with
+                            Nepali, English and Mathematics.
+                        </p>
+                    </details>
+
+
+                    <details>
+                        <summary>
+                            Is Computer Science available?
+                        </summary>
+
+                        <p>
+                            Yes. Computer Science and Information
+                            Technology is available in Physical Group.
+                        </p>
+                    </details>
+
+
+                    <details>
+                        <summary>
+                            What credit courses are available?
+                        </summary>
+
+                        <p>
+                            Examples include Nepali Reading,
+                            English Reading, Public Speaking and
+                            Python Programming.
+                        </p>
+                    </details>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- AI Bots -->
+        <section class="page">
+            <div class="page-content">
+
+                <p class="eyebrow">AI TOOLS</p>
+
+                <h2>Academic bots</h2>
+
+                <p class="section-text">
+                    Tools designed to help students with their
+                    academic work.
+                </p>
+
+                <div class="card-grid">
+
+                    <div class="info-card">
+                        <span class="card-number">01</span>
+
+                        <h3>Academic Problem Solver</h3>
+
+                        <p>
+                            Ask academic questions and get help
+                            from Syllabus Sensei.
+                        </p>
+
+                        <button onclick="openSolver()">
+                            Open solver
+                        </button>
+                    </div>
+
+
+                    <div class="info-card">
+                        <span class="card-number">02</span>
+
+                        <h3>Deerwalk Assistant</h3>
+                        Under Development !
+                        <p>
+                            Find information about streams,
+                            subjects and school academics.
+                        </p>
+                    </div>
+
+
+                    <div class="info-card">
+                        <span class="card-number">03</span>
+
+                        <h3>Coding Sensei</h3>
+                        Under Development !
+                        <p>
+                            A future assistant for programming
+                            and computer science.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Solver -->
+        <section class="page">
+            <div class="page-content solver-page">
+
+                <p class="eyebrow">SYLLABUS SENSEI</p>
+
+                <h2>Academic Problem Solver</h2>
+
+                <p class="section-text">
+                    Ask a question and let Sensei search the
+                    Deerwalk academic knowledge base.
+                </p>
+
+                <textarea
+                    id="solver-input"
+                    placeholder="Ask something about your studies..."
+                ></textarea>
+
+                <button
+                    class="primary-button"
+                    onclick="sendQuestion()"
+                >
+                    Ask Sensei
+                </button>
+
+                <div id="solver-response">
+                    Your answer will appear here.
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer class="page-controls">
+
+        <button
+            id="previous-button"
+            onclick="previousPage()"
+            aria-label="Previous page"
+        >
+            <
+        </button>
+
+        <div id="page-number">
+            1 / 10
+        </div>
+
+        <button
+            id="next-button"
+            onclick="nextPage()"
+            aria-label="Next page"
+        >
+            >
+        </button>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
